@@ -1,2 +1,10 @@
 <h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<% if @post.errors.any? %>
+              <div>
+                <ul>
+                  <% @post.errors.full_messages.each do |msg| %>
+                         <li><span style="color: red;"><%= msg %></span></li>
+                  <% end %>
+                </ul>
+              </div>
+<% end %>

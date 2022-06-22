@@ -1,0 +1,11 @@
+<% if @post.errors.any? %>
+      <p> aaaaa </p>
+      <div>
+         <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+                  <li><span style="color: red;"><%= msg %></span></li>
+                  <p> <%= msg %> </p>
+            <% end %>
+         </ul>
+      </div>
+<% end %>      
