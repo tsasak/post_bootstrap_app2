@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   def destroy
      # ***** 修正(@を追加しているので注意！) *****
      @post.destroy!
-     redirect_to root_path, alert: "削除しました"
+     redirect_to @post, alert: "削除しました"
   end
 
   private
